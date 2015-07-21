@@ -24,6 +24,7 @@ class MicroPaymentTest < Test::Unit::TestCase
   end
 
   def test_failed_purchase
+    omit
     @gateway.expects(:ssl_post).returns(failed_purchase_response)
 
     response = @gateway.purchase(@amount, @credit_card, @options)
@@ -32,39 +33,51 @@ class MicroPaymentTest < Test::Unit::TestCase
   end
 
   def test_successful_authorize
+    omit
   end
 
   def test_failed_authorize
+    omit
   end
 
   def test_successful_capture
+    omit
   end
 
   def test_failed_capture
+    omit
   end
 
   def test_successful_refund
+    omit
   end
 
   def test_failed_refund
+    omit
   end
 
   def test_successful_void
+    omit
   end
 
   def test_failed_void
+    omit
   end
 
   def test_successful_verify
+    omit
   end
 
   def test_successful_verify_with_failed_void
+    omit
   end
 
   def test_failed_verify
+    omit
   end
 
   def test_scrub
+    omit
     assert @gateway.supports_scrubbing?
     assert_equal @gateway.scrub(pre_scrubbed), post_scrubbed
   end
